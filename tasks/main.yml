@@ -1,0 +1,33 @@
+---
+
+- name: Checks if a partition exists
+  shell: |
+    /bin/grep {{disk_partition}} /proc/partitions | /usr/bin/wc -l
+  register: needs_partition
+
+- name: debugging
+  debug: msg="{{needs_partition.stdout}}"
+
+- name: (Workaround) Script to create one partition
+  template:
+    src: create-partition.j2
+    dest: /usr/local/bin/create-partition.sh
+    mode: 0755
+  when: needs_partition.stdout == "0"
+
+- name: Creates one partition
+  command: /usr/local/bin/create-partition.sh
+  when: needs_partition.stdout == "0"
+
+- name: formats partition if needed
+  filesystem:
+    fstype: "{{format_type}}"
+    dev: "/dev/{{disk_partition}}"
+
+- name: Mount New Partition
+  mount:
+    path: "{{mount_point}}"
+    src: "/dev/{{disk_partition}}"
+    fstype: "{{format_type}}"
+    opts: "{{mount_opts}}"
+    state: mounted
