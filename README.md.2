@@ -1,6 +1,3 @@
-# :bomb: DEPRECATED :bomb:
-### Please refer to: https://gitlab.cloudopsprod.aws.velocityfrequentflyer.internal/vff/ansible-role-one-partition.git
-
 # one-partition
 
  Boring but useful
