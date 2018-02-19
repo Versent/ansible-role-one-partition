@@ -9,9 +9,9 @@ Variables
 
 ```yml
 ---
-    - partitions:
-      - disk_volume: "/dev/xdvh"
-        format_type: "ext4"
+- partitions:
+ - disk_volume: "/dev/xdvh"
+   format_type: "ext4"
 
 ```
 
