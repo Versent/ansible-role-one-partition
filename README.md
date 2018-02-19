@@ -1,6 +1,3 @@
-# :bomb: DEPRECATED :bomb:
-### Please refer to: https://gitlab.cloudopsprod.aws.velocityfrequentflyer.internal/vff/ansible-role-one-partition.git
-
 # one-partition
 
  Boring but useful
@@ -13,8 +10,7 @@ Variables
 ```yml
 ---
 - partitions:
- - disk_volume: "/dev/xdvh"
-   format_type: "ext4"
-
+    - disk_volume: "/dev/xdvh"
+      format_type: "ext4"
 ```
 
