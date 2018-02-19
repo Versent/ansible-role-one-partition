@@ -1,5 +1,3 @@
-# DEPRECATED
-### Please refer to: git@gitlab.cloudopsprod.aws.velocityfrequentflyer.internal/vff/ansible-role-one-partition.git
 # one-partition
 
  Boring but useful
