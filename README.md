@@ -1,5 +1,5 @@
 # :bomb: DEPRECATED :bomb:
-### Please refer to: https://gitlab.cloudopsprod.aws.velocityfrequentflyer.internal/vff/ansible-role-one-partition.git
+### Please refer to: https://gitlab.cloudopsprod.aws.velocityfrequentflyer.internal/enc/ansible-role-one-partition.git
 
 # one-partition
 
